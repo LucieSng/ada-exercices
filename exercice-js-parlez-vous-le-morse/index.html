@@ -3,8 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <title>Parlez vous le morse</title>
   </head>
-  <body></body>
-  <script src="script.js"></script>
+  <body>
+    <main>
+      <header><h1>Parlez-vous le morse ?</h1></header>
+      <div class="input">
+        <label for="name">Saisir votre phrase à traduire :</label>
+        <br />
+        <input
+          type="text"
+          id="text"
+          name="text"
+          required
+          minlength="4"
+          maxlength="8"
+          size="10"
+        />
+      </div>
+      <div class="container-btn">
+        <button class="morse-latin">Traduire du morse</button>
+        <button class="latin-morse">Traduire du latin</button>
+      </div>
+    </main>
+    <footer>© Lucie Seng - 2025</footer>
+  </body>
+  <script src="script.js" defer></script>
 </html>
