@@ -41,15 +41,13 @@ const latinToMorse = {
 
 // Créer une fonction translateLatinCharacter qui prend un paramètre un caractère et renvoie sa correspondance en morse.
 
-// Tester la fonction en lui donnant en paramètre “A”, et assurez-vous qu’elle renvoie bien .-.
-
 function translateLatinCharacter(character) {
   return latinToMorse[character.toUpperCase()];
 
   // Le toUpperCase permet de transformer les minuscules en majuscules.
 }
 
-// étape 3
+// Étape 3
 function encode(text) {
   const array = []; // faire un tableau vide pour stocker le résultat
   const splittedText = getLatinCharacterList(text); // stocker le texte séparé grâce à la fonction dans une variable
@@ -66,9 +64,9 @@ function encode(text) {
   return array.join(" "); // transformer le tableau en chaine de caractères
 }
 
-console.log(encode("Ceci est un test"));
+// console.log(encode("Ceci est un test"));
 
-// étape 4
+// Étape 4
 
 const morseToLatin = {
   "-": "T",
@@ -99,17 +97,17 @@ const morseToLatin = {
   "....": "H",
 };
 
-// fonction pour séparer chaque caractères morse
+// Fonction pour séparer chaque caractère morse
 function getMorseCharacterList(text) {
   return text.split(" ");
 }
 
-// fonction pour traduire chaque morse en lettre
+// Fonction pour traduire chaque morse en lettre
 function translateMorseCharacter(character) {
   return morseToLatin[character];
 }
 
-// décoder de morse à texte
+// Décoder de morse à texte
 function decode(text) {
   const array = []; // initialiser un tableau pour stocker mon résultat
 
@@ -128,4 +126,24 @@ function decode(text) {
   return array.join(""); // transformer le tableau en chaine de caractères
 }
 
-console.log(decode("-.-. . -.-. .. / . ... - / ..- -. / - . ... -"));
+// console.log(decode("-.-. . -.-. .. / . ... - / ..- -. / - . ... -"));
+
+// Étape 5
+// Utilisez des champs de saisie input en HTML et des boutons pour traduire du texte et du morse dans un sens ou dans l’autre.
+// Je récupère l'élément input HTML
+const inputUser = document.getElementById("text");
+// Je crée la variable qui permet de récupérer les éléments bouton du HTML
+const buttonTranslateMorse = document.querySelector(".latin-morse");
+const buttonTranslateLatin = document.querySelector(".morse-latin");
+// Je crée la variable qui permet de récupérer le résultat
+const resultTranslate = document.querySelector(".result");
+
+// Je veux qu'au clic sur "Traduire en morse", l'élément soit traduit.
+buttonTranslateMorse.addEventListener("click", function () {
+  resultTranslate.textContent = encode(inputUser.value);
+});
+
+// Je veux qu'au clic sur "Traduire en latin", l'élément soit traduit.
+buttonTranslateLatin.addEventListener("click", function () {
+  resultTranslate.textContent = decode(inputUser.value);
+});

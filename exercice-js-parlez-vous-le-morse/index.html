@@ -9,30 +9,39 @@
       href="https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="styles.css" />
+
     <title>Parlez vous le morse</title>
   </head>
   <body>
     <main>
       <header><h1>Parlez-vous le morse ?</h1></header>
-      <div class="input">
-        <label for="name">Saisir votre phrase à traduire :</label>
-        <br />
-        <input
-          type="text"
-          id="text"
-          name="text"
-          required
-          minlength="4"
-          maxlength="8"
-          size="10"
-        />
-      </div>
-      <div class="container-btn">
-        <button class="morse-latin">Traduire du morse</button>
-        <button class="latin-morse">Traduire du latin</button>
+      <div class="container">
+        <div class="input">
+          <label for="text"
+            ><p>Votre élément à traduire (200 caractères maximum) :</p></label
+          >
+          <br />
+          <input
+            type="text"
+            id="text"
+            value=""
+            name="text"
+            required
+            minlength="4"
+            maxlength="200"
+            size="50"
+            placeholder="Que souhaitez-vous traduire ?"
+          />
+        </div>
+        <div class="container-btn">
+          <button class="latin-morse"><p>Traduire en morse</p></button>
+          <button class="morse-latin"><p>Traduire en latin</p></button>
+        </div>
+        <div class="result"><p>Votre résultat apparaîtra ici</p></div>
       </div>
     </main>
-    <footer>© Lucie Seng - 2025</footer>
+    <footer><p>© Lucie Seng - 2025</p></footer>
   </body>
   <script src="script.js" defer></script>
 </html>
