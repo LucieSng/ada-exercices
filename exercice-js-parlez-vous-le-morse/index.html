@@ -15,28 +15,43 @@
   </head>
   <body>
     <main>
-      <header><h1>Parlez-vous le morse ?</h1></header>
+      <img
+        src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcXRtbWFmbzY0djVnamc4eTF2NWQ5YjJ0MHY4NWtsdjF1b3lobnRnOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/2K831rgLgqfJLGp75A/giphy.gif"
+        alt="gif d'une illustration de morse"
+        title="gif d'une illustration de morse"
+      />
       <div class="container">
-        <div class="input">
-          <label for="text"
-            ><p>Votre élément à traduire (200 caractères maximum) :</p></label
-          >
-          <br />
-          <input
-            type="text"
-            id="text"
-            value=""
-            name="text"
-            required
-            minlength="4"
-            maxlength="200"
-            size="50"
-            placeholder="Que souhaitez-vous traduire ?"
-          />
-        </div>
-        <div class="container-btn">
-          <button class="latin-morse"><p>Traduire en morse</p></button>
-          <button class="morse-latin"><p>Traduire en latin</p></button>
+        <div class="translate">
+          <header><h1>Parlez-vous le morse ?</h1></header>
+          <div class="input-translate">
+            <div class="input">
+              <label for="text"
+                ><p>
+                  Votre élément à traduire (200 caractères maximum) :
+                </p></label
+              >
+              <br />
+              <input
+                type="text"
+                id="text"
+                value=""
+                name="text"
+                required
+                minlength="4"
+                maxlength="200"
+                size="50"
+                placeholder="Que souhaitez-vous traduire ?"
+              />
+            </div>
+            <div class="container-btn">
+              <button class="latin-morse" disabled>
+                <p>Traduire en morse</p>
+              </button>
+              <button class="morse-latin" disabled>
+                <p>Traduire en latin</p>
+              </button>
+            </div>
+          </div>
         </div>
         <div class="result"><p>Votre résultat apparaîtra ici</p></div>
       </div>

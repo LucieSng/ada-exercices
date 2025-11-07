@@ -11,23 +11,44 @@ body {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  background-color: rgb(220, 232, 255);
+  border-radius: 20px;
+  padding: 32px;
 }
 
+img {
+  border-radius: 20px;
+  object-fit: fill;
+}
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+}
+
+/* Résultat */
 .result {
-  background-color: rgb(244, 244, 244);
+  background-color: rgb(255, 255, 255);
   height: 24px;
   width: 500px;
-  padding: 4px 12px;
+  padding: 6px 12px;
+}
+
+/* Input */
+
+.input-translate {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 #text:hover {
   border: #0000ca solid 1.5px;
-}
-
-footer {
-  bottom: 0;
-  position: fixed;
-  margin-bottom: 20px;
 }
 
 #text {
@@ -35,6 +56,13 @@ footer {
   height: 24px;
   width: 500px;
   padding: 4px 12px;
+}
+
+/* Boutons */
+.container-btn {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
 }
 
 button {
@@ -52,20 +80,13 @@ button:hover {
 
 button:disabled {
   background-color: rgb(110, 110, 110);
-  color: rgb(175, 175, 175);
+  color: rgb(180, 180, 180);
   cursor: not-allowed;
 }
 
-h1 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 2rem;
-}
-
-p {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1rem;
-}
-
-.input p {
-  color: rgb(94, 94, 94);
+footer {
+  bottom: 0;
+  position: fixed;
+  margin-bottom: 20px;
+  color: rgb(105, 105, 105);
 }

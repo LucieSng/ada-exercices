@@ -147,3 +147,14 @@ buttonTranslateMorse.addEventListener("click", function () {
 buttonTranslateLatin.addEventListener("click", function () {
   resultTranslate.textContent = decode(inputUser.value);
 });
+
+// Gestion des disabled boutons en fonction de l'input de l'utilisateur.
+inputUser.addEventListener("input", function () {
+  if (inputUser.value !== ``) {
+    buttonTranslateMorse.disabled = false;
+    buttonTranslateLatin.disabled = false;
+  } else {
+    buttonTranslateMorse.disabled = true;
+    buttonTranslateLatin.disabled = true;
+  }
+});
